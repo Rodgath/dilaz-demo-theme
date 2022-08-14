@@ -1,0 +1,295 @@
+/*-----------------------------------------------------------------------------------
+	T A B L E   O F   C O N T E N T S
+	---------------------------------------------------------------------------------
+	01.	CSS Reset & Clearfix
+	02.	Document Setup (body, common classes, vertical rhythm, structure etc)
+	03.	Header
+	04.	Navigation & Menus
+	05.	Main Content
+	06.	Post Content
+	07.	Comments
+	08.	Pagination
+	09.	Footer
+	10.	Page
+	11.	Widgets
+	12.	Widgets
+	13.	Sortcodes
+	14.	Gallery
+	15.	Print
+
+-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	01.	CSS Reset & Clearfix
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	02.	Document Setup (body, common classes, vertical rhythm, structure, utilities etc)
+/*-----------------------------------------------------------------------------------*/
+body {
+	background:url(images/body_bg.gif) repeat;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+textarea {
+	color: #888;
+}
+
+.wrapper {
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Common classes */
+.display-5 {
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+/* Utilities */
+.clear:before, 
+.clear:after {
+	content: " ";
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	03.	Header
+/*-----------------------------------------------------------------------------------*/
+.logo {
+
+}
+
+.navbar-brand > img {
+    height: 100%
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	04.	Navigation & Menus
+/*-----------------------------------------------------------------------------------*/
+.n00b-menu li > a {
+    padding: 10px 25px 10px 15px;
+    color: #000;
+}
+
+.n00b-menu.active a:focus,
+.n00b-menu li a:focus ,
+.navbar > .show > a:focus{
+    /* background: transparent; */
+    outline: 0;
+}
+
+.n00b-menu .dropdown-menu {
+	padding: 0;
+	margin: 0;
+	border-radius: 0
+}
+
+.n00b-menu .dropdown-toggle::after{
+  position: absolute;
+  right: 10px;
+	top: 50%
+}
+
+.n00b-menu .dropdown-menu .show > .dropdown-toggle::after{
+    transform: rotate(-90deg)
+}
+
+.navbar-nav li:hover > a {
+	position: relative;
+	background-color: #f8f9fa;
+	color: #000
+}
+
+.navbar-nav li:hover > .dropdown-menu {
+  display: block
+}
+
+.dropdown > .dropdown-toggle:active {
+    /* Without this, clicking will make it sticky */
+    pointer-events: none
+}
+
+.n00b-menu .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	05.	Main Content
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	06.	Post Content
+/*-----------------------------------------------------------------------------------*/
+.entry-header {
+	margin-bottom: 5px;
+}
+.entry-header .entry-title a,
+.entry-header .page-title a{
+	color: #343a40
+}
+.entry-header .date, 
+.entry-header .author {
+	margin-bottom: 1.25rem;
+	color: #999;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	07.	Comments
+/*-----------------------------------------------------------------------------------*/
+div[class^="comment-form-"] {
+	margin-bottom: 15px;
+}
+div[class^="comment-form-"] input[name="author"],
+div[class^="comment-form-"] input[name="email"],
+div[class^="comment-form-"] input[name="url"],
+div[class^="comment-form-"] textarea[name="comment"] {
+	width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	08.	Pagination
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	09.	Footer
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	10.	Page
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	11.	Sidebar
+/*-----------------------------------------------------------------------------------*/
+.sidebar {
+	margin-bottom: 20px
+}
+.sidebar section {
+	margin-bottom: 20px
+}
+.sidebar ul,
+.sidebar ol {
+	list-style-type: none;
+	padding: 0
+}
+.sidebar li {
+	margin: 10px 0
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	12.	Widgets
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	13.	Sortcodes
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.	Gallery
+/*-----------------------------------------------------------------------------------*/
+.wp-caption {
+	background: white;
+	border: thin solid #F0F0F0;
+	max-width: 95%;
+	padding: 5px 5px;
+	text-align: center;
+}
+.wp-caption img {
+	width: auto;
+	max-width: 98.5%;
+	height: auto;
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	margin: 0;
+	padding: 0 5px 5px;
+	font-size: 140%;
+	line-height: 1.5;
+}
+
+
+
+ 
+/**
+ * partials/wordpress
+ * ---
+ * Wordpess core classes
+ */
+ 
+
+
+
+ 
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	15.	Print
+/*	@link - https://github.com/h5bp/main.css/blob/master/dist/_print.css
+/*-----------------------------------------------------------------------------------*/
+@media print {
+	*,*:before,*:after {
+		background:transparent !important;
+		color:#000 !important;
+		/* Black prints faster */
+		-webkit-box-shadow:none !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	/* * Don't show links that are fragment identifiers,* or use the `javascript:` pseudo protocol */
+	a[href^="#"]:after,a[href^="javascript:"]:after {
+		content:"";
+	}
+	pre {
+		white-space:pre-wrap !important;
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside: avoid;
+	}
+	/* * Printing Tables:* http://css-discuss.incutio.com/wiki/Printing_Tables */
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	p,h2,h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,h3 {
+		page-break-after: avoid;
+	}
+}
